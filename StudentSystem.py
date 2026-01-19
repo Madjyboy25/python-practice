@@ -67,7 +67,7 @@ def main():
             ID=input("Enter student's ID: ")
             student=system.find_student(ID)
             if student!="Student not found.":
-                print (student.grade)
+            
                 student.is_passed(student.grade)
             else:
                 print(student)
