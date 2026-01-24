@@ -1,3 +1,4 @@
+# This is a simple contact book management system using functions and dictionaries in Python.
 contacts={}
 def add_contact(name, phone, ID):
     if name and phone and ID  not in contacts:

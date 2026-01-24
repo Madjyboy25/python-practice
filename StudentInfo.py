@@ -1,3 +1,4 @@
+# This is a simple student information management system using file handling in Python.It connects to Student.txt file.
 def add_student():
     ID=input("Create an ID for the student:")
     name=input("Student's name:")
@@ -21,6 +22,25 @@ def Display_All_Students():
         lines=file.readlines()
         for line in lines:
          print(line,end="")
+def Detete_Student( ):
+   ID=input("Enter student's ID you want to delete:")
+   with open("Student.txt","r") as file:
+         lines=file.readlines()
+   remainning_students=[]
+   found=False
+   for line in lines:
+      data=line.strip().split()
+      if data[0]==ID:
+         found=True
+         
+      else:
+         remainning_students.append(line)    
+   if found:
+      with open("Student.txt","w") as file:
+         file.writelines(remainning_students)
+      print("Student deleted")
+   else:
+      print("Student not found")
 
 def main():
    while True:
@@ -28,8 +48,9 @@ def main():
       print("Type 1 to add student")
       print("Type 2 to search for a student")
       print("Type 3 to display all students")
-      print("Type 4 to quit")
-      choice=input("Type 1-4:")
+      print("Type 4 to delete a student")
+      print("Type 5 to quit")
+      choice=input("Type 1-5:")
       if choice=="1":
          add_student()
       elif choice=="2":
@@ -37,6 +58,8 @@ def main():
       elif choice=="3":
          Display_All_Students()
       elif choice=="4":
+         Detete_Student()
+      elif choice=="5":
          print("You quit")
          break
 main()

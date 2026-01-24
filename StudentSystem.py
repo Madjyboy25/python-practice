@@ -1,3 +1,4 @@
+# I use class and object-oriented programming to create a simple student management system in Python.
 class Student:
     def __init__(self,name,ID,age,grade):
         self.name=name

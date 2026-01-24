@@ -1,3 +1,4 @@
+# This is a simple competition player management system using while loop and if-else in Python.
 players=[]
 while True:
     print("1-Adding a new player")

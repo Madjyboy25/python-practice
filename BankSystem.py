@@ -1,3 +1,4 @@
+# This is a simple bank system using while loop,for loop and if-else in Python.
 balance=0
 transactions={}
 while True:

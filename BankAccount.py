@@ -1,3 +1,4 @@
+# This is a simple bank account management system using Class in Python.
 class BankAccount:
     def __init__(self, name):
         self.name = name

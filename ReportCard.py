@@ -1,3 +1,4 @@
+# This is a simple report card management system using functions and dictionaries in Python.
 students_infos={}
 def add_student(name, ID, age, grade):
     if name in students_infos:
